@@ -1,0 +1,42 @@
+//Text open and close
+/*Text open and close*/
+@keyframes textAnime{
+  0%{
+      color: black;
+  }
+  30%{
+      letter-spacing: 25px;
+  }
+  85%{
+      letter-spacing: 2px;
+  }
+  100%{
+    letter-spacing: 8px;
+  }
+}
+//Animating the Color
+/*This is animating the color*/
+@keyframes textColor{
+
+  0%{
+      color: #dbbe47;
+  }
+  35%{
+      color: #fffc43;
+  }
+  65%{      
+      color: #ddcb26;
+  }
+  100%{      
+      color: #dbbe47;
+  }
+}
+
+@keyframes opacityText{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 100%;
+  }
+}

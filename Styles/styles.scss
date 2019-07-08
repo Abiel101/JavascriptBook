@@ -1,6 +1,47 @@
-.hidden{
-  display: none
+@import '_animations';
+//Body styles
+body{
+  background-color: black;
+  color: white;
+  font-family: gotham;
+  font-weight: lighter;
+  text-align: center;
 }
-.javascript:hover .hidden {
+h1{
+  color: black;
+  position: relative;
+  top: 2.5em;
+  letter-spacing: 8px;
+  font-size: 4em;
+  animation: opacityText 1s forwards ease-in, textAnime 1.5s forwards ease-in, textColor 2s infinite 0.2s ease-in-out;
+}
+.nav{
+  z-index: 1; 
+  width: 50%;
+  position: relative;
+  top: 8em;
+  font-size: 2em;
+  ul{
+    list-style: none;
+    li{
+      display: inline;
+    }
+  }
+}
+.nav--left{
+  float: left;
+}
+.nav--right{
+  float: right;
+}
+.javascript , .jquery{
+  cursor: pointer;
+}
+.hidden{
+  display: none;
+  font-size: 14px;
+}
+.javascript:hover .hidden, .jquery:hover .hidden {
   display: block;
+  padding: 10px;
 }

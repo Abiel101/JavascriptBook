@@ -1,8 +1,134 @@
-.hidden {
-  display: none;
+/*Text open and close*/
+@-webkit-keyframes textAnime {
+  0% {
+    color: black;
+  }
+  30% {
+    letter-spacing: 25px;
+  }
+  85% {
+    letter-spacing: 2px;
+  }
+  100% {
+    letter-spacing: 8px;
+  }
+}
+@keyframes textAnime {
+  0% {
+    color: black;
+  }
+  30% {
+    letter-spacing: 25px;
+  }
+  85% {
+    letter-spacing: 2px;
+  }
+  100% {
+    letter-spacing: 8px;
+  }
 }
 
-.javascript:hover .hidden {
+/*This is animating the color*/
+@-webkit-keyframes textColor {
+  0% {
+    color: #dbbe47;
+  }
+  35% {
+    color: #fffc43;
+  }
+  65% {
+    color: #ddcb26;
+  }
+  100% {
+    color: #dbbe47;
+  }
+}
+@keyframes textColor {
+  0% {
+    color: #dbbe47;
+  }
+  35% {
+    color: #fffc43;
+  }
+  65% {
+    color: #ddcb26;
+  }
+  100% {
+    color: #dbbe47;
+  }
+}
+
+@-webkit-keyframes opacityText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes opacityText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: gotham;
+  font-weight: lighter;
+  text-align: center;
+}
+
+h1 {
+  color: black;
+  position: relative;
+  top: 2.5em;
+  letter-spacing: 8px;
+  font-size: 4em;
+  -webkit-animation: opacityText 1s forwards ease-in, textAnime 1.5s forwards ease-in, textColor 2s infinite 0.2s ease-in-out;
+          animation: opacityText 1s forwards ease-in, textAnime 1.5s forwards ease-in, textColor 2s infinite 0.2s ease-in-out;
+}
+
+.nav {
+  z-index: 1;
+  width: 50%;
+  position: relative;
+  top: 8em;
+  font-size: 2em;
+}
+
+.nav ul {
+  list-style: none;
+}
+
+.nav ul li {
+  display: inline;
+}
+
+.nav--left {
+  float: left;
+}
+
+.nav--right {
+  float: right;
+}
+
+.javascript, .jquery {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+  font-size: 14px;
+}
+
+.javascript:hover .hidden, .jquery:hover .hidden {
   display: block;
+  padding: 10px;
 }
 /*# sourceMappingURL=styles.css.map */
