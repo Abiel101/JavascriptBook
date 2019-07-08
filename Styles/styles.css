@@ -58,6 +58,7 @@
   }
 }
 
+/*Thi is text fading in and out*/
 @-webkit-keyframes opacityText {
   0% {
     opacity: 0;
@@ -66,7 +67,6 @@
     opacity: 100%;
   }
 }
-
 @keyframes opacityText {
   0% {
     opacity: 0;
