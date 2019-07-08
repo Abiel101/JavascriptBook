@@ -1,0 +1,8 @@
+.hidden {
+  display: none;
+}
+
+.javascript:hover .hidden {
+  display: block;
+}
+/*# sourceMappingURL=styles.css.map */
