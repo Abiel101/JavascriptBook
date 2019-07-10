@@ -42,3 +42,22 @@
     opacity: 100%;
   }
 }
+
+//Underline Animation
+/*Underline animation*/
+@keyframes underline{
+
+  0%{
+      background-color: #03a9f4;
+  }
+  35%{
+      background-color: #f441a5;
+  }
+  65%{      
+      background-color: #ffeb3b;
+  }
+  100%{      
+      background-color: #03a9f4;
+  }
+
+}

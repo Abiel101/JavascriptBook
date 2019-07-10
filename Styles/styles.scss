@@ -13,7 +13,9 @@ h1{
   top: 2.5em;
   letter-spacing: 8px;
   font-size: 4em;
-  animation: opacityText 1s forwards ease-in, textAnime 1.5s forwards ease-in, textColor 2s infinite 0.2s ease-in-out;
+  animation: opacityText 1s forwards ease-in, 
+  textAnime 1s forwards ease-in, 
+  textColor 2s infinite 0.2s ease-in-out;
 }
 .nav{
   z-index: 1; 
@@ -34,14 +36,37 @@ h1{
 .nav--right{
   float: right;
 }
-.javascript , .jquery{
+.javascript, .jquery{
   cursor: pointer;
 }
 .hidden{
   display: none;
   font-size: 14px;
+  
 }
 .javascript:hover .hidden, .jquery:hover .hidden {
   display: block;
   padding: 10px;
+}
+
+
+//Not Working I don't know WHY!!!!!
+.anime{
+  position: relative;
+}
+.anime::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  animation: underline 2s ease-in 1s infinite;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.anime:hover::before{
+  transform: scale(1);
+  transform-origin: bottom left;
 }
