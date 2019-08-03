@@ -76,50 +76,99 @@
   }
 }
 
+/*Underline animation*/
+@-webkit-keyframes underline {
+  0% {
+    background-color: #03a9f4;
+  }
+  35% {
+    background-color: #f441a5;
+  }
+  65% {
+    background-color: #ffeb3b;
+  }
+  100% {
+    background-color: #03a9f4;
+  }
+}
+@keyframes underline {
+  0% {
+    background-color: #03a9f4;
+  }
+  35% {
+    background-color: #f441a5;
+  }
+  65% {
+    background-color: #ffeb3b;
+  }
+  100% {
+    background-color: #03a9f4;
+  }
+}
+
 body {
   background-color: black;
   color: white;
   font-family: gotham;
   font-weight: lighter;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 h1 {
-  color: black;
-  position: relative;
-  top: 2.5em;
+  margin-top: 25%;
   letter-spacing: 8px;
   font-size: 4em;
-  -webkit-animation: opacityText 1s forwards ease-in, textAnime 1.5s forwards ease-in, textColor 2s infinite 0.2s ease-in-out;
-          animation: opacityText 1s forwards ease-in, textAnime 1.5s forwards ease-in, textColor 2s infinite 0.2s ease-in-out;
+  -webkit-animation: opacityText 1s forwards ease-in,  textAnime 1s forwards ease-in,  textColor 2s infinite 0.2s ease-in-out;
+          animation: opacityText 1s forwards ease-in,  textAnime 1s forwards ease-in,  textColor 2s infinite 0.2s ease-in-out;
 }
 
-.nav {
-  z-index: 1;
-  width: 50%;
-  position: relative;
-  top: 8em;
+.main {
+  width: 900px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 50px;
+}
+
+.main .box {
+  margin-top: 10%;
+  width: 100%;
   font-size: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.nav ul {
+.main .box ul {
   list-style: none;
 }
 
-.nav ul li {
+.main .box ul li {
   display: inline;
 }
 
-.nav--left {
-  float: left;
-}
-
-.nav--right {
-  float: right;
+li a {
+  color: white;
+  text-decoration: none;
+  padding: 2px;
 }
 
 .javascript, .jquery {
   cursor: pointer;
+  padding: 2px;
 }
 
 .hidden {
@@ -130,5 +179,35 @@ h1 {
 .javascript:hover .hidden, .jquery:hover .hidden {
   display: block;
   padding: 10px;
+}
+
+.anime {
+  position: relative;
+}
+
+.anime::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  -webkit-animation: underline 2s ease-in 1s infinite;
+          animation: underline 2s ease-in 1s infinite;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+
+.anime:hover::before {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
 }
 /*# sourceMappingURL=styles.css.map */

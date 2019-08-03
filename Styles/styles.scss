@@ -1,56 +1,66 @@
 @import '_animations';
-//Body styles
+//Body styles and centering the body
 body{
   background-color: black;
   color: white;
   font-family: gotham;
   font-weight: lighter;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 h1{
-  color: black;
-  position: relative;
-  top: 2.5em;
+  margin-top: 25%;
   letter-spacing: 8px;
   font-size: 4em;
   animation: opacityText 1s forwards ease-in, 
   textAnime 1s forwards ease-in, 
   textColor 2s infinite 0.2s ease-in-out;
 }
-.nav{
-  z-index: 1; 
-  width: 50%;
-  position: relative;
-  top: 8em;
-  font-size: 2em;
-  ul{
-    list-style: none;
-    li{
-      display: inline;
+//navigation side to side separation
+.main{
+  width: 900px;
+  display: flex;
+  margin-top: 50px;
+  .box{
+    margin-top: 10%;
+    width: 100%;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    ul{
+      list-style: none;
+      li{
+        display: inline;
+      }
     }
   }
 }
-.nav--left{
-  float: left;
+li{
+  a{
+    color: white;
+    text-decoration: none;
+    padding: 2px;
+  }
 }
-.nav--right{
-  float: right;
-}
+
+
+//Navigation list styling and links
 .javascript, .jquery{
   cursor: pointer;
+  padding: 2px;
 }
 .hidden{
   display: none;
   font-size: 14px;
-  
 }
 .javascript:hover .hidden, .jquery:hover .hidden {
   display: block;
-  padding: 10px;
+padding: 10px;
 }
 
-
-//Not Working I don't know WHY!!!!!
+//underline animation
 .anime{
   position: relative;
 }
