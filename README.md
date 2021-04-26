@@ -4,4 +4,4 @@ This is my hole javascript book in chapter examples. Only some will be listed be
 # NOTES
 [] DO some updates to the website for how I am arranging things in the website itself
 [] Refactor the website and use it to study my coding stuff here.
-[] 
+[] The normal size fo this page will ge half of the window in my desktop after that anything bigger I will resize so it fits well and keep it at that size. Nothing bigger 
