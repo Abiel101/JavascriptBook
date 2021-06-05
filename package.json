@@ -1,0 +1,24 @@
+{
+  "name": "JavascriptBook",
+  "version": "1.0.0",
+  "description": "This is my hole javascript book in chapter examples. Only some will be listed because there will be challenges that do not cover so much so to save space I will use only examples that will challenge me",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abiel101/JavascriptBook.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abiel101/JavascriptBook/issues"
+  },
+  "homepage": "https://github.com/Abiel101/JavascriptBook#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.34.1"
+  }
+}
