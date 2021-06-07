@@ -1,0 +1,135 @@
+/*Text open and close*/
+@keyframes textAnime {
+  0% {
+    color: black;
+  }
+  30% {
+    letter-spacing: 25px;
+  }
+  85% {
+    letter-spacing: 2px;
+  }
+  100% {
+    letter-spacing: 8px;
+  }
+}
+/*This is animating the color*/
+@keyframes textColor {
+  0% {
+    color: #dbbe47;
+  }
+  35% {
+    color: #fffc43;
+  }
+  65% {
+    color: #ddcb26;
+  }
+  100% {
+    color: #dbbe47;
+  }
+}
+/*Thi is text fading in and out*/
+@keyframes opacityText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+/*Underline animation*/
+@keyframes underline {
+  0% {
+    background-color: #03a9f4;
+  }
+  35% {
+    background-color: #f441a5;
+  }
+  65% {
+    background-color: #ffeb3b;
+  }
+  100% {
+    background-color: #03a9f4;
+  }
+}
+body {
+  background-color: black;
+  color: white;
+  font-family: gotham;
+  font-weight: lighter;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  margin-top: 25%;
+  letter-spacing: 8px;
+  font-size: 4em;
+  animation: opacityText 1s forwards ease-in, textAnime 1s forwards ease-in, textColor 2s infinite 0.2s ease-in-out;
+}
+
+.main {
+  width: 900px;
+  display: flex;
+  margin-top: 50px;
+}
+.main .box {
+  margin-top: 10%;
+  width: 100%;
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+}
+.main .box ul {
+  list-style: none;
+}
+.main .box ul li {
+  display: inline;
+}
+
+li a {
+  color: white;
+  text-decoration: none;
+  padding: 2px;
+}
+
+.javascript, .jquery {
+  cursor: pointer;
+  padding: 2px;
+}
+
+.hidden {
+  display: none;
+  font-size: 14px;
+}
+
+.javascript:hover .hidden, .jquery:hover .hidden {
+  display: block;
+  padding: 10px;
+}
+
+.anime {
+  position: relative;
+}
+
+.anime::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  animation: underline 2s ease-in 1s infinite;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.anime:hover::before {
+  transform: scale(1);
+  transform-origin: bottom left;
+}
+
+/*# sourceMappingURL=/styles.2b96cfcd.css.map */
