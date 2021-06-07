@@ -1,82 +1,58 @@
 @use "abstracts";
 //Body styles and centering the body
 body{
-  background-color: black;
-  color: white;
-  font-family: gotham;
-  font-weight: lighter;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #edf0d1;
+  color: #222;
+  font-family: Poppins;
 }
-h1{
-  margin-top: 25%;
-  letter-spacing: 8px;
-  font-size: 4em;
-  animation: opacityText 1s forwards ease-in, 
-  textAnime 1s forwards ease-in, 
-  textColor 2s infinite 0.2s ease-in-out;
+.title{
+  position: relative;
+  font-size: 3em; //for mobile do 1em
+  animation: opacityText 1.5s forwards ease-in, 
+  textAnime 1s forwards ease-in-out,;
+  h1{
+    text-align: center;
+    text-shadow: 5px 5px 0 rgb(224, 224, 36),  10px 10px 0 #f1f1f1,  15px 15px 0 rgb(201, 201, 25);
+  }
 }
 //navigation side to side separation
-.main{
-  width: 900px;
-  display: flex;
-  margin-top: 50px;
-  .box{
-    margin-top: 10%;
-    width: 100%;
-    font-size: 2em;
-    display: flex;
-    justify-content: center;
-    ul{
-      list-style: none;
-      li{
-        display: inline;
-      }
-    }
-  }
+.nav{
+  padding: 3em;
+  width: 100%;
+  margin: 3em;
 }
-li{
-  a{
-    color: white;
-    text-decoration: none;
-    padding: 2px;
-  }
+.links{
+  margin-top: 10%;
+  width: 100%;
 }
-
+a{
+  color: #222;
+  text-decoration: none;
+  padding: 2px;
+}
 
 //Navigation list styling and links
 .javascript, .jquery{
   cursor: pointer;
-  padding: 2px;
-}
-.hidden{
-  display: none;
-  font-size: 14px;
-}
-.javascript:hover .hidden, .jquery:hover .hidden {
-  display: block;
-padding: 10px;
+  p{
+    font-size: 1.3em;
+  }
 }
 
-//underline animation
-.anime{
-  position: relative;
-}
-.anime::before{
-  content: '';
-  position: absolute;
+.hidden{
   width: 100%;
-  transform: scaleX(0);
-  height: 1px;
-  bottom: 0;
-  left: 0;
-  animation: underline 2s ease-in 1s infinite;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
+  height: 0;
+  overflow: hidden;
+  font-size: 14px;
+  background-color: #f1f1f1;
 }
-.anime:hover::before{
-  transform: scale(1);
-  transform-origin: bottom left;
+// Switching this for onclick and try to animate it. So it looks like a switch thats on and off lol
+.javascript:hover .hidden, .jquery:hover .hidden {
+  height: 100%;
+  overflow: visible;
+  padding: 10px;
+  border: 1px solid #222;
 }

@@ -1,39 +1,36 @@
 //Text open and close
-/*Text open and close*/
 @keyframes textAnime{
   0%{
-      color: black;
+    top: 50px;
+    opacity: 0;
   }
-  30%{
-      letter-spacing: 25px;
-  }
-  85%{
-      letter-spacing: 2px;
+  50%{
+    top: -30px;
   }
   100%{
-    letter-spacing: 8px;
+    top: 0;
+    opacity: 1;
   }
 }
-//Animating the Color
-/*This is animating the color*/
-@keyframes textColor{
 
-  0%{
-      color: #2d7e31;
-  }
-  35%{
-      color: #43f2ff;
-  }
-  65%{      
-      color: #dd2691;
-  }
-  100%{      
-      color: #47cadb;
-  }
-}
+//Animating the Color
+// @keyframes textColor{
+
+//   0%{
+//       color: #2d7e31;
+//   }
+//   35%{
+//       color: #43f2ff;
+//   }
+//   65%{      
+//       color: #dd2691;
+//   }
+//   100%{      
+//       color: #47cadb;
+//   }
+// }
 
 //This is text fading in and out
-/*Thi is text fading in and out*/
 @keyframes opacityText{
   0%{
     opacity: 0;
@@ -44,20 +41,19 @@
 }
 
 //Underline Animation
-/*Underline animation*/
-@keyframes underline{
+// @keyframes underline{
 
-  0%{
-      background-color: #03a9f4;
-  }
-  35%{
-      background-color: #f441a5;
-  }
-  65%{      
-      background-color: #ffeb3b;
-  }
-  100%{      
-      background-color: #03a9f4;
-  }
+//   0%{
+//       background-color: #03a9f4;
+//   }
+//   35%{
+//       background-color: #f441a5;
+//   }
+//   65%{      
+//       background-color: #ffeb3b;
+//   }
+//   100%{      
+//       background-color: #03a9f4;
+//   }
 
-}
+// }

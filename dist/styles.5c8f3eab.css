@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@keyframes textAnime {
+  0% {
+    top: 50px;
+    opacity: 0;
+  }
+  50% {
+    top: -30px;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+@keyframes opacityText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #edf0d1;
+  color: #222;
+  font-family: Poppins;
+}
+
+.title {
+  position: relative;
+  font-size: 3em;
+  animation: opacityText 1.5s forwards ease-in, textAnime 1s forwards ease-in-out;
+}
+.title h1 {
+  text-align: center;
+  text-shadow: 5px 5px 0 #e0e024, 10px 10px 0 #f1f1f1, 15px 15px 0 #c9c919;
+}
+
+.nav {
+  padding: 3em;
+  width: 100%;
+  margin: 3em;
+}
+
+.links {
+  margin-top: 10%;
+  width: 100%;
+}
+
+a {
+  color: #222;
+  text-decoration: none;
+  padding: 2px;
+}
+
+.javascript, .jquery {
+  cursor: pointer;
+}
+.javascript p, .jquery p {
+  font-size: 1.3em;
+}
+
+.hidden {
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  font-size: 14px;
+  background-color: #f1f1f1;
+}
+
+.javascript:hover .hidden, .jquery:hover .hidden {
+  height: 100%;
+  overflow: visible;
+  padding: 10px;
+  border: 1px solid #222;
+}
+
+/*# sourceMappingURL=/styles.5c8f3eab.css.map */
