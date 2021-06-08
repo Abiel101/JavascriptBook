@@ -68,14 +68,32 @@ a {
   height: 0;
   overflow: hidden;
   font-size: 14px;
-  background-color: #f1f1f1;
+  background-color: #eceedf;
+  border-radius: 10px;
 }
 
-.javascript:hover .hidden, .jquery:hover .hidden {
+.open {
   height: 100%;
   overflow: visible;
   padding: 10px;
-  border: 1px solid #222;
+  box-shadow: inset 0 0 1px #222222ab;
+  font-size: 14px;
+  background-color: #eceedf;
+  border-radius: 10px;
+}
+
+.btn {
+  border: 1px solid #eceedf;
+  width: 150px;
+  text-align: center;
+  border-radius: 25px;
+  padding: 20px;
+  box-shadow: -5px -5px 15px #f4f5ec, 5px 5px 10px rgba(34, 34, 34, 0.055);
+  transition: 0.15s;
+}
+
+.btn:active {
+  box-shadow: 0 0 0 #f4f5ec, 0 0 0 rgba(34, 34, 34, 0.055);
 }
 
 /*# sourceMappingURL=/styles.5c8f3eab.css.map */
